@@ -10,10 +10,14 @@
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -298,39 +302,43 @@
         </div>
         <div class="owl-carousel owl-theme owl-carousel-adv">
           <div class="box-adv">
-            <img
-              src="https://i1.sndcdn.com/artworks-000165384395-rhrjdn-t500x500.jpg"
-              alt="">
+            <div class="position-relative">
+              <img src="./img//bg_slots.png" alt="">
+              <div class="position-absolute title-img">促销活动1图片</div>
+            </div>
             <div class="box-adv-body">
               <p class="title-above">SLOTS</p>
               <p>促销活动1内容</p>
             </div>
           </div>
           <div class="box-adv">
-            <img
-              src="https://i1.sndcdn.com/artworks-000165384395-rhrjdn-t500x500.jpg"
-              alt="">
+            <div class="position-relative">
+              <img src="./img//bg_slots.png" alt="">
+              <div class="position-absolute title-img">促销活动1图片</div>
+            </div>
             <div class="box-adv-body">
               <p class="title-above">SLOTS</p>
-              <p>促销活动1内容</p>
+              <p>促销活动2内容</p>
             </div>
           </div>
           <div class="box-adv">
-            <img
-              src="https://i1.sndcdn.com/artworks-000165384395-rhrjdn-t500x500.jpg"
-              alt="">
+            <div class="position-relative">
+              <img src="./img//bg_slots.png" alt="">
+              <div class="position-absolute title-img">促销活动1图片</div>
+            </div>
             <div class="box-adv-body">
               <p class="title-above">SLOTS</p>
-              <p>促销活动1内容</p>
+              <p>促销活动3内容</p>
             </div>
           </div>
           <div class="box-adv">
-            <img
-              src="https://i1.sndcdn.com/artworks-000165384395-rhrjdn-t500x500.jpg"
-              alt="">
+            <div class="position-relative">
+              <img src="./img//bg_slots.png" alt="">
+              <div class="position-absolute title-img">促销活动1图片</div>
+            </div>
             <div class="box-adv-body">
               <p class="title-above">SLOTS</p>
-              <p>促销活动1内容</p>
+              <p>促销活动4内容</p>
             </div>
           </div>
         </div>
@@ -657,70 +665,68 @@
           <h6 class="fw-bold color-primary">J8热门促销活动</h6>
         </div>
         <div class="w-90 mx-auto mt-3">
-          <div id="carousel">
-            <div class="hideLeft">
-              <img
-                src="https://i1.sndcdn.com/artworks-000165384395-rhrjdn-t500x500.jpg">
-            </div>
-
-            <div class="prevLeftSecond">
-              <img
-                src="https://i1.sndcdn.com/artworks-000185743981-tuesoj-t500x500.jpg">
-            </div>
-
-            <div class="prev">
-              <img
-                src="https://i1.sndcdn.com/artworks-000158708482-k160g1-t500x500.jpg">
-            </div>
-
-            <div class="selected">
-              <img src="img/background-slider.png" alt="background">
-              <div class="content-slide">
-                促销活动1内容
+          <!-- Slider main container -->
+          <div class="swiper-container container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="position-relative">
+                  <div class="position-absolute title-img">促销活动1图片</div>
+                  <img src="img/background-slider.png" alt="background"
+                    class="img-fluid">
+                </div>
+                <div class="bg-white swiper-slider-body">
+                  <div class="title-slots">SLOTS</div>
+                  <div class="content-slide">促销活动1内容</div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="position-relative">
+                  <div class="position-absolute title-img">促销活动2图片</div>
+                  <img src="img/background-slider.png" alt="background"
+                    class="img-fluid">
+                </div>
+                <div class="bg-white swiper-slider-body">
+                  <div class="title-slots">SLOTS</div>
+                  <div class="content-slide">促销活动2内容</div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="position-relative">
+                  <div class="position-absolute title-img">促销活动3图片</div>
+                  <img src="img/background-slider.png" alt="background"
+                    class="img-fluid">
+                </div>
+                <div class="bg-white swiper-slider-body">
+                  <div class="title-slots">SLOTS</div>
+                  <div class="content-slide">促销活动3内容</div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="position-relative">
+                  <div class="position-absolute title-img">促销活动4图片</div>
+                  <img src="img/background-slider.png" alt="background"
+                    class="img-fluid">
+                </div>
+                <div class="bg-white swiper-slider-body">
+                  <div class="title-slots">SLOTS</div>
+                  <div class="content-slide">促销活动4内容</div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="position-relative">
+                  <div class="position-absolute title-img">促销活动5图片</div>
+                  <img src="img/background-slider.png" alt="background"
+                    class="img-fluid">
+                </div>
+                <div class="bg-white swiper-slider-body">
+                  <div class="title-slots">SLOTS</div>
+                  <div class="content-slide">促销活动5内容</div>
+                </div>
               </div>
             </div>
-
-            <div class="next">
-              <img
-                src="https://i1.sndcdn.com/artworks-000028787381-1vad7y-t500x500.jpg">
-            </div>
-
-            <div class="nextRightSecond">
-              <img
-                src="https://i1.sndcdn.com/artworks-000108468163-dp0b6y-t500x500.jpg">
-            </div>
-
-            <div class="hideRight">
-              <img
-                src="https://i1.sndcdn.com/artworks-000064920701-xrez5z-t500x500.jpg">
-            </div>
           </div>
-          <!-- <div class="owl-carousel owl-theme">
-              <a href="#zero" class="item item-slide" data-hash="zero">
-                <img class="w-100" src="img/background-slider.png" alt="background">
-                <div class="content-slide">
-                  促销活动1内容
-                </div>
-              </a>
-              <a href="#one" class="item item-slide" data-hash="one">
-                <img class="w-100" src="img/background-slider.png" alt="background">
-                <div class="content-slide">
-                  促销活动2内容
-                </div>
-              </a>
-              <a href="#two" class="item item-slide" data-hash="two">
-                <img class="w-100" src="img/background-slider.png" alt="background">
-                <div class="content-slide">
-                  促销活动3内容
-                </div>
-              </a>
-              <a href="#tree" class="item item-slide" data-hash="tree">
-                <img class="w-100" src="img/background-slider.png" alt="background">
-                <div class="content-slide">
-                  促销活动4内容
-                </div>
-              </a>
-            </div> -->
         </div>
 
         <div class="w-90 mx-auto mt-3">
@@ -1008,6 +1014,31 @@
             items: 4
           }
         }
+      })
+
+      var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        speed: 1000,
+        autoplay: {
+          delay: 3000,
+        },
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 80,
+          depth: 200,
+          modifier: 1,
+          slideShadows: false,
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
       })
     })
   </script>
