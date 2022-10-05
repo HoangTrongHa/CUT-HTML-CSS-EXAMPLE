@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>手机页面</title>
+</head>
+<body>
+
+</body>
+<script
+src="https://code.jquery.com/jquery-3.6.1.js"
+integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+crossorigin="anonymous"></script>
+<script src="owlcarousel/owl.carousel.min.js"></script>
+<script>
+  $(document).ready(function() {
+    function moveToSelected(element) {
+
+    if (element == "next") {
+      var selected = $(".selected").next();
+    } else if (element == "prev") {
+      var selected = $(".selected").prev();
+    } else {
+      var selected = element;
+    }
+
+    var next = $(selected).next();
+    var prev = $(selected).prev();
+    var prevSecond = $(prev).prev();
+    var nextSecond = $(next).next();
+
+    $(selected).removeClass().addClass("selected");
+
+    $(prev).removeClass().addClass("prev");
+    $(next).removeClass().addClass("next");
+
+    $(nextSecond).removeClass().addClass("nextRightSecond");
+    $(prevSecond).removeClass().addClass("prevLeftSecond");
+
+    $(nextSecond).nextAll().removeClass().addClass('hideRight');
+    $(prevSecond).prevAll().removeClass().addClass('hideLeft');
+
+    }
+
+    // Eventos teclado
+    $(document).keydown(function(e) {
+      switch(e.which) {
+          case 37: // left
+          moveToSelected('prev');
+          break;
+
+          case 39: // right
+          moveToSelected('next');
+          break;
+
+          default: return;
+      }
+      e.preventDefault();
+    });
+
+    $('#carousel div').click(function() {
+    moveToSelected($(this));
+    });
+
+    $('#prev').click(function() {
+    moveToSelected('prev');
+    });
+
+    $('#next').click(function() {
+    moveToSelected('next');
+    });
+
+  // owl = $(".owl-carousel").owlCarousel({items:1});
+  })
+</script>
+</html>
