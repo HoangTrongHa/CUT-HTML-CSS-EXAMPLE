@@ -314,7 +314,7 @@
           <div class="box-adv">
             <div class="position-relative">
               <img src="./img//bg_slots.png" alt="">
-              <div class="position-absolute title-img">促销活动1图片</div>
+              <div class="position-absolute title-img">促销活动2图片</div>
             </div>
             <div class="box-adv-body">
               <p class="title-above">SLOTS</p>
@@ -324,7 +324,7 @@
           <div class="box-adv">
             <div class="position-relative">
               <img src="./img//bg_slots.png" alt="">
-              <div class="position-absolute title-img">促销活动1图片</div>
+              <div class="position-absolute title-img">促销活动3图片</div>
             </div>
             <div class="box-adv-body">
               <p class="title-above">SLOTS</p>
@@ -334,11 +334,21 @@
           <div class="box-adv">
             <div class="position-relative">
               <img src="./img//bg_slots.png" alt="">
-              <div class="position-absolute title-img">促销活动1图片</div>
+              <div class="position-absolute title-img">促销活动4图片</div>
             </div>
             <div class="box-adv-body">
               <p class="title-above">SLOTS</p>
               <p>促销活动4内容</p>
+            </div>
+          </div>
+          <div class="box-adv">
+            <div class="position-relative">
+              <img src="./img//bg_slots.png" alt="">
+              <div class="position-absolute title-img">促销活动5图片</div>
+            </div>
+            <div class="box-adv-body">
+              <p class="title-above">SLOTS</p>
+              <p>促销活动5内容</p>
             </div>
           </div>
         </div>
@@ -999,8 +1009,13 @@
         }
       })
 
-      $('.owl-carousel-adv').owlCarousel({
+      var owl_carousel_adv = $('.owl-carousel-adv');
+      owl_carousel_adv.children('.box-adv').each(function (index) {
+        $(this).attr('data-position', index); // NB: .attr() instead of .data()
+      });
+      owl_carousel_adv.owlCarousel({
         loop: true,
+        center: true,
         margin: 10,
         nav: false,
         responsive: {
@@ -1015,6 +1030,13 @@
           }
         }
       })
+
+      $(document).on('click', '.owl-item>.box-adv', function () {
+        debugger;
+        // see https://owlcarousel2.github.io/OwlCarousel2/docs/api-events.html#to-owl-carousel
+        var speed = 300;  // in ms
+        owl_carousel_adv.trigger('to.owl.carousel', [$(this).data('position'), speed]);
+      });
 
       var mySwiper = new Swiper('.swiper-container', {
         loop: true,
@@ -1033,11 +1055,15 @@
           modifier: 1,
           slideShadows: false,
         },
-
         // Navigation arrows
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
+        },
+        on: {
+          click(event) {
+            mySwiper.slideTo(this.clickedIndex);
+          },
         },
       })
     })
